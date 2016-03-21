@@ -11,7 +11,7 @@ per_page: 10
 <% end %>
 
 <% page_articles.each_with_index do |article, i| %>
-  <h2><%= link_to article.title, article %> <span><%= article.date.strftime('%b %e') %></span></h2>
+  <h2><%= link_to article.title, article %> <time datetime="<%= article.date.strftime("%F") %>"<%= article.date.strftime('%b %e') %></time></h2>
   <!-- use article.summary(250) if you have Nokogiri available to show just
        the first 250 characters -->
   <%= article.body %>

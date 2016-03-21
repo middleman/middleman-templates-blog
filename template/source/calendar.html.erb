@@ -22,7 +22,7 @@ pageable: true
 
 <ul>
   <% page_articles.each_with_index do |article, i| %>
-    <li><%= link_to article.title, article %> <span><%= article.date.strftime('%b %e') %></span></li>
+    <li><%= link_to article.title, article %> <time datetime="<%= article.date.strftime("%F") %>"<%= article.date.strftime('%b %e') %></time></li>
   <% end %>
 </ul>
 
